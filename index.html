@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivek Singh | Academic & Teaching Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* NEW COLORS BASED ON USER'S GRADIENT IMAGE */
+            --gradient-start: #a6c0fe; /* Light Purplish Blue */
+            --gradient-end: #f68084;   /* Soft Coral/Pink */
+            
+            /* Derived Primary/Secondary colors for text and elements */
+            --primary-color: #0d47a1; /* Dark Blue (Kept for strong contrast) */
+            --secondary-color: #f68084; /* Use the red end for accents */
+            --text-color: #333333; /* Near Black for readability */
+            --light-bg: #f4f7f9; /* Soft light gray background */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+            /* Increased base font size and better line height for user-friendly Canvas */
+            line-height: 1.65;
+            font-size: 1.05rem; 
+        }
+        .header-gradient {
+            /* Applying the new gradient */
+            background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+        }
+        .section-title {
+            position: relative;
+            padding-bottom: 0.75rem; /* Increased padding */
+            margin-bottom: 2rem; /* Increased margin */
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%; /* Full underline for better emphasis */
+            height: 4px;
+            /* Using the secondary color which is now the pink/coral */
+            background-color: var(--secondary-color);
+            border-radius: 9999px;
+        }
+        .card {
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.05); /* Subtle border for definition */
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-7px); /* More pronounced hover lift */
+            box-shadow: 0 15px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        /* Gradient Button Class */
+        .gradient-button {
+            background: linear-gradient(90deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+            color: white;
+            font-weight: 700;
+            transition: opacity 0.3s;
+        }
+        .gradient-button:hover {
+            opacity: 0.9;
+        }
+        /* Mobile adjustment for navigation links */
+        @media (max-width: 767px) {
+            .md\:flex.space-x-4 {
+                display: none; /* Hide desktop nav on mobile */
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white sticky top-0 z-10 shadow-xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex">
+                    <div class="flex-shrink-0 flex items-center">
+                        <span class="text-2xl font-extrabold text-primary-color">VIVEK SINGH</span>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <!-- Desktop Navigation Links -->
+                    <div class="hidden md:flex space-x-6 items-center">
+                        <a href="#about" class="text-gray-600 hover:text-secondary-color font-medium transition duration-150">About</a>
+                        <a href="#education" class="text-gray-600 hover:text-secondary-color font-medium transition duration-150">Education</a>
+                        <a href="#skills" class="text-gray-600 hover:text-secondary-color font-medium transition duration-150">Expertise</a>
+                        <!-- Button using the new gradient class -->
+                        <a href="#contact" class="gradient-button py-2 px-5 rounded-full text-sm font-semibold transition duration-300 shadow-md">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+                <!-- Simple Mobile Menu Icon (Placeholder for interaction) -->
+                <div class="flex items-center md:hidden">
+                    <button class="text-gray-600 hover:text-primary-color focus:outline-none p-2 rounded-md">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Section -->
+    <header id="about" class="header-gradient py-20 md:py-32 text-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between">
+            <!-- Text Content -->
+            <div class="md:w-3/5 text-center md:text-left mb-8 md:mb-0">
+                <p class="text-xl font-light mb-2 opacity-80">Hello, I'm</p>
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight mb-4">
+                    VIVEK SINGH
+                </h1>
+                <p class="text-2xl sm:text-3xl font-medium mb-6">
+                    Post-Graduate in Physics | Dedicated Educator
+                </p>
+                <p class="text-lg opacity-90 max-w-xl mx-auto md:mx-0">
+                    A dedicated professional with a solid foundation in Advanced Physics and specialized training in Teaching Methodologies (B.Ed.). Committed to fostering academic excellence and holistic student development.
+                </p>
+                <div class="mt-10 flex flex-col sm:flex-row justify-center md:justify-start space-y-4 sm:space-y-0 sm:space-x-6">
+                    <!-- Button 1: Download Resume (NEW) -->
+                    <a href="uploaded:Vivek Singh Resume.pdf" download="Vivek_Singh_Resume.pdf" class="gradient-button py-3 px-8 rounded-full transition duration-300 shadow-xl text-lg hover:opacity-90 flex items-center justify-center">
+                        <!-- Download Icon -->
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                        Download Resume
+                    </a>
+                    
+                    <!-- Button 2: Let's Connect -->
+                    <a href="#contact" class="text-white border-2 border-white hover:bg-white hover:text-primary-color font-bold py-3 px-8 rounded-full transition duration-300 text-lg flex items-center justify-center">
+                        Let's Connect
+                    </a>
+                </div>
+            </div>
+
+            <!-- Profile Image -->
+            <div class="md:w-1/4 flex justify-center mt-8 md:mt-0">
+                <div class="w-56 h-56 bg-white rounded-full flex items-center justify-center shadow-2xl border-4 border-white overflow-hidden">
+                    <!-- Image from uploaded resume file -->
+                    <img src="vivek singh.png" 
+                         alt="Vivek Singh Profile Picture" 
+                         class="w-full h-full object-cover rounded-full">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold section-title text-primary-color mx-auto text-center md:text-left">Academic Credentials</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+
+                <!-- Degree 1: Master of Science (Physics) -->
+                <div class="p-8 bg-light-bg rounded-xl card border-t-4 border-primary-color">
+                    <h3 class="text-2xl font-bold mb-2 text-primary-color">M.Sc. in Physics</h3>
+                    <p class="text-sm text-gray-500 mb-3">Dr. RMLAU, Faizabad | Jul 2018 - Jul 2020</p>
+                    <p class="text-xl font-bold text-gray-700">63% (First Division)</p>
+                    <ul class="mt-4 text-gray-700 space-y-2 text-base">
+                        <li><span class="font-semibold">Focus:</span> Advanced Physics concepts.</li>
+                        <li><span class="font-semibold">Outcome:</span> Strong theoretical and practical foundation.</li>
+                    </ul>
+                </div>
+
+                <!-- Degree 2: Bachelor of Education (B.Ed.) - Highlighted -->
+                <div class="p-8 bg-light-bg rounded-xl card border-t-4 border-secondary-color">
+                    <h3 class="text-2xl font-bold mb-2 text-secondary-color">B.Ed. (Teaching & Management)</h3>
+                    <p class="text-sm text-gray-500 mb-3">Dr. RMLAU, Faizabad | Jul 2020 - Jul 2022</p>
+                    <!-- Highlight color uses a shade of the secondary color -->
+                    <p class="text-xl font-bold text-primary-color bg-secondary-color/20 inline-block px-3 py-1 rounded-full">76.66% (Highest Achievement)</p>
+                    <ul class="mt-4 text-gray-700 space-y-2 text-base">
+                        <li><span class="font-semibold">Specialization:</span> Teaching Methodologies.</li>
+                        <li><span class="font-semibold">Expertise:</span> Effective Lesson Planning & Classroom Management.</li>
+                    </ul>
+                </div>
+
+                <!-- Degree 3: MBA (Finance & Marketing) -->
+                <div class="p-8 bg-light-bg rounded-xl card border-t-4 border-primary-color">
+                    <h3 class="text-2xl font-bold mb-2 text-primary-color">MBA (Finance & Marketing)</h3>
+                    <p class="text-sm text-gray-500 mb-3">SVS University, Faizabad | Jul 2019 - Jul 2021</p>
+                    <p class="text-xl font-bold text-gray-700">68.41% (Grade A)</p>
+                    <ul class="mt-4 text-gray-700 space-y-2 text-base">
+                        <li><span class="font-semibold">Focus:</span> Financial & Marketing Strategies.</li>
+                        <li><span class="font-semibold">Skills:</span> Enhanced Leadership and Problem-Solving abilities.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center text-gray-700 p-6 bg-secondary-color/10 rounded-xl border border-secondary-color/30">
+                <p class="text-xl font-semibold flex items-center justify-center">
+                    <svg class="w-6 h-6 mr-2 text-secondary-color" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    Additional Certification: Course on Computer Concepts (CCC) from NIELIT (2022).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Expertise Section -->
+    <section id="skills" class="py-20 bg-light-bg">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-extrabold section-title text-primary-color mx-auto text-center md:text-left">Core Expertise & Skills</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-10">
+                <!-- Expertise Card -->
+                <div class="p-8 bg-white rounded-xl card border-l-4 border-primary-color">
+                    <div class="flex items-center text-primary-color mb-4">
+                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.5l8 4.5v9l-8-4.5-8 4.5v-9l8-4.5zM20 11L12 6.5M12 6.5L4 11M12 6.5v9"></path></svg>
+                        <h3 class="text-xl font-bold">Subject Expertise</h3>
+                    </div>
+                    <ul class="list-disc text-gray-700 space-y-2 pl-6 text-base">
+                        <li>Advanced Physics (M.Sc. Level)</li>
+                        <li>Mathematics</li>
+                        <li>General Science</li>
+                    </ul>
+                </div>
+
+                <!-- Teaching Competencies Card -->
+                <div class="p-8 bg-white rounded-xl card border-l-4 border-secondary-color">
+                    <div class="flex items-center text-secondary-color mb-4">
+                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <h3 class="text-xl font-bold">Pedagogical Skills</h3>
+                    </div>
+                    <ul class="list-disc text-gray-700 space-y-2 pl-6 text-base">
+                        <li>Effective Lesson Planning & Design</li>
+                        <li>Structured Classroom Management</li>
+                        <li>High Student Engagement Techniques</li>
+                    </ul>
+                </div>
+
+                <!-- Professional Strengths Card -->
+                <div class="p-8 bg-white rounded-xl card border-l-4 border-primary-color">
+                    <div class="flex items-center text-primary-color mb-4">
+                        <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-5m0 0l-5-5M7 4h5V7m0 0L7 12"></path></svg>
+                        <h3 class="text-xl font-bold">Soft Skills</h3>
+                    </div>
+                    <ul class="list-disc text-gray-700 space-y-2 pl-6 text-base">
+                        <li>Strong Communication & Mentoring</li>
+                        <li>Leadership and Team Collaboration</li>
+                        <li>Analytical Problem-Solving</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Technology Skills Bar -->
+            <div class="mt-12 p-8 bg-white rounded-xl card border-t-4 border-gray-300">
+                <h3 class="text-2xl font-bold mb-4 text-primary-color">Technology Proficiency</h3>
+                <div class="flex flex-wrap gap-4">
+                    <span class="bg-primary-color/10 text-primary-color text-base font-semibold px-4 py-2 rounded-full shadow-sm">MS Office Suite</span>
+                    <span class="bg-primary-color/10 text-primary-color text-base font-semibold px-4 py-2 rounded-full shadow-sm">Basic Computer Applications</span>
+                    <span class="bg-primary-color/10 text-primary-color text-base font-semibold px-4 py-2 rounded-full shadow-sm">Internet Research</span>
+                    <span class="bg-primary-color/10 text-primary-color text-base font-semibold px-4 py-2 rounded-full shadow-sm">CCC Certified (NIELIT)</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-extrabold section-title text-primary-color mx-auto mb-10">Get In Touch</h2>
+            <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
+                I am actively seeking a rewarding teaching position where I can apply my academic background and pedagogical skills. Please connect with me to discuss opportunities.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center space-y-6 sm:space-y-0 sm:space-x-8">
+                
+                <!-- Email -->
+                <a href="mailto:vivek.singh120799@gmail.com" class="flex flex-col items-center justify-center p-6 rounded-xl bg-light-bg card hover:bg-white transition duration-300 w-full sm:w-1/2">
+                    <svg class="w-8 h-8 text-secondary-color mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m-2-3H5a2 2 0 00-2 2v10a2 2 0 002 2h14a2 2 0 002-2V7a2 2 0 00-2-2z"></path></svg>
+                    <p class="text-sm text-gray-500 font-medium">Send an Email</p>
+                    <!-- Applying gradient to the text/link for accent -->
+                    <p class="text-lg font-bold" style="background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">vivek.singh120799@gmail.com</p>
+                </a>
+
+                <!-- Phone -->
+                <a href="tel:+917309663140" class="flex flex-col items-center justify-center p-6 rounded-xl bg-light-bg card hover:bg-white transition duration-300 w-full sm:w-1/2">
+                    <svg class="w-8 h-8 text-secondary-color mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.5l1.5 4.5L13 10l-2 2 4 4 2-2 3.5 1.5 4.5 1.5V19a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path></svg>
+                    <p class="text-sm text-gray-500 font-medium">Call Me</p>
+                    <!-- Applying gradient to the text/link for accent -->
+                    <p class="text-lg font-bold" style="background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">+91 7309663140</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="header-gradient py-8 mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white text-sm">
+            <p>&copy; 2025 Vivek Singh. All rights reserved. | <a href="mailto:vivek.singh120799@gmail.com" class="hover:underline">Contact</a></p>
+            <p class="mt-1 opacity-70">Ambedkar Nagar, Uttar Pradesh, India</p>
+        </div>
+    </footer>
+
+</body>
+</html>
